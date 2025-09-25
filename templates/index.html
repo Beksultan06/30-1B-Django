@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿{% load static %}
+
+<!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
 <!--><html class="no-js" lang="en"><!--<![endif]-->
@@ -19,18 +21,18 @@
 	
 	<!-- CSS
   ================================================== -->
-	<link rel="stylesheet" href="css/base.css"/>
-	<link rel="stylesheet" href="css/skeleton.css"/>
-	<link rel="stylesheet" href="css/layout.css"/>
-	<link rel="stylesheet" href="css/font-awesome.css" />
-	<link rel="stylesheet" href="css/colorbox.css"/>
-	<link rel="stylesheet" href="css/retina.css"/>
+	<link rel="stylesheet" href="{% static 'css/base.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/skeleton.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/layout.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/font-awesome.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/colorbox.css' %}"/>
+	<link rel="stylesheet" href="{% static 'css/retina.css' %}"/>
 	
-	<link rel="alternate stylesheet" type="text/css" href="css/colors/color-orange.css" title="orange">
-    <link rel="alternate stylesheet" type="text/css" href="css/colors/color-green.css" title="green">
-    <link rel="alternate stylesheet" type="text/css" href="css/colors/color-red.css" title="red">
-    <link rel="alternate stylesheet" type="text/css" href="css/colors/color-blue.css" title="blue">
-    <link rel="alternate stylesheet" type="text/css" href="css/colors/color-yellow.css" title="yellow">	
+	<link rel="alternate stylesheet" type="text/css" href="{% static 'css/colors/color-orange.css' %}" title="orange">
+    <link rel="alternate stylesheet" type="text/css" href="{% static 'css/colors/color-green.css' %}" title="green">
+    <link rel="alternate stylesheet" type="text/css" href="{% static 'css/colors/color-red.css' %}" title="red">
+    <link rel="alternate stylesheet" type="text/css" href="{% static 'css/colors/color-blue.css' %}" title="blue">
+    <link rel="alternate stylesheet" type="text/css" href="{% static 'css/colors/color-yellow.css' %}" title="yellow">	
 
 		
 		
@@ -661,16 +663,11 @@
         <div id="setting"></div>
     </div>
     <!-- Switch Panel -->
-
-   
-
-
-	
 	<!-- JAVASCRIPT
     ================================================== -->
-<script type="text/javascript" src="js/jquery.js"></script>	
-<script type="text/javascript" src="js/modernizr.custom.js"></script> 
-<script type="text/javascript" src="js/royal_preloader.min.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>	
+<script type="text/javascript" src="{% static 'js/modernizr.custom.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/royal_preloader.min.js' %}"></script>
 <script type="text/javascript">
             Royal_Preloader.config({
                 mode:           'text', // 'number', "text" or "logo"
@@ -681,20 +678,20 @@
                 background:     ['#000000']
             });
 </script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/cbpAnimatedHeader.min.js"></script>
-<script type="text/javascript" src="js/styleswitcher.js"></script>
-<script type="text/javascript" src="js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="js/flippy.js"></script>
-<script type="text/javascript" src="js/mb.bgndGallery.js"></script>
-<script type="text/javascript" src="js/jquery.easing.js"></script>
-<script type="text/javascript" src="js/svganimations.js"></script>
-<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-<script type="text/javascript" src="js/jquery.colorbox.js"></script> 
-<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="{% static 'js/classie.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/cbpAnimatedHeader.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/styleswitcher.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/retina-1.1.0.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/flippy.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mb.bgndGallery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.easing.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/svganimations.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.bxslider.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.colorbox.js' %}"></script> 
+<script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
-<script type="text/javascript" src="js/plugins.js"></script>
-<script type="text/javascript" src="js/template.js"></script>  	  
+<script type="text/javascript" src="{% static 'js/plugins.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/template.js' %}"></script>  	  
 <!-- End Document
 ================================================== -->
 </body>
