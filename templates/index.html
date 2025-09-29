@@ -38,10 +38,10 @@
 		
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="favicon.png">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+	<link rel="shortcut icon" href="favicon.png' %}">
+	<link rel="apple-touch-icon" href="apple-touch-icon.png' %}">
+	<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png' %}">
+	<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png' %}">
 	
 	
 	
@@ -95,29 +95,28 @@
 			</div>
 		</div>		
 
+			{% for settings in settings_all %}			
 			<div id="home">	
-				<div class="just_pattern"></div>	
+				<div class="just_pattern" style="background-image: url('{{ settings.image.url }}')"></div>
 				<div class="big-text">
 					<ul class="flippy">
-						<li><span>we are Chronos</span></li>
-						<li><span>BORN INTO CREATIVITY</span></li>
-						<li><span>FOCUSED ON STRATEGY</span></li>
+						<li><span>{{ settings.title }}</span></li>
 					</ul>
 				</div>
 				<div class="small-text">- specialized in brand experience -</div>
 				<div class="social-top">
 					<ul class="list-social">
 						<li class="icon-soc tipped" data-title="twitter"  data-tipper-options='{"direction":"top","follow":"true"}'>
-							<a href="#">&#xf099;</a>
+							<a href="{{ settings.twitter }}">&#xf099;</a>
 						</li>
 						<li class="icon-soc tipped" data-title="facebook"  data-tipper-options='{"direction":"top","follow":"true"}'>
-							<a href="#">&#xf09a;</a>
+							<a href="{{ settings.facebook }}">&#xf09a;</a>
 						</li>
 						<li class="icon-soc tipped" data-title="github"  data-tipper-options='{"direction":"top","follow":"true"}'>
-							<a href="#">&#xf09b;</a>
+							<a href="{{ settings.github }}">&#xf09b;</a>
 						</li>
 						<li class="icon-soc tipped" data-title="google +"  data-tipper-options='{"direction":"top","follow":"true"}'>
-							<a href="#">&#xf0d5;</a>
+							<a href="{{ setting.google }}">&#xf0d5;</a>
 						</li>
 					</ul>	
 				</div>	
@@ -129,6 +128,7 @@
 				</div>			
 				<a class="scroll" href="#about"><div class="scroll-btn tipped" data-title="about agency"  data-tipper-options='{"direction":"top","follow":"true"}'></div></a>
 			</div>
+			{% endfor %}
 
 			
 			<div id="about">
@@ -142,7 +142,7 @@
 						<div id="main" class="main">
 							<figure>
 								<div class="drawings mac">
-									<img class="illustration" src="images/imac.png" alt="iMac Illustration" />
+									<img class="illustration" src="{% static 'images/imac.png' %}" alt="iMac Illustration" />
 									<svg class="line-drawing" id="mac" width="100%" height="600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600">
 										<path d="M 257.85024,158.16843 754.90716,35.953537 731.06035,405.57906 228.78695,448.8014 z" /> 
 										<path d="m 259.83736,136.30872 c 0,0 -6.74232,0.97288 -11.61303,5.46502 -3.96751,3.659 -6.12527,9.40831 -7.01729,20.86596 l -36.5158,346.77284 c 0,0 -3.47753,13.41382 10.68151,14.15903 l 517.67468,-21.11485 c 0,0 18.38216,0.74522 19.87257,-19.62369 L 784.07068,11.384991 c 0,0 0.059,-13.07475 -23.20111,-7.2266959 L 259.83736,136.30872 z" /> 
@@ -189,7 +189,7 @@
 						<div class="flipWrapper">
 							<div class="card">
 								<div class="face front">
-									<img src="images/team1.jpg" alt="" />
+									<img src="{% static 'images/team1.jpg' %}" alt="" />
 								</div>
 								<div class="face back">
 									<p><small><em>Art Director</em></small></p>
@@ -211,7 +211,7 @@
 						<div class="flipWrapper">
 							<div class="card">
 								<div class="face front">
-									<img src="images/team2.jpg" alt="" />
+									<img src="{% static 'images/team2.jpg' %}" alt="" />
 								</div>
 								<div class="face back">
 									<p><small><em>Graphic Designer</em></small></p>
@@ -233,7 +233,7 @@
 						<div class="flipWrapper">
 							<div class="card">
 								<div class="face front">
-									<img src="images/team3.jpg" alt="" />
+									<img src="{% static 'images/team3.jpg' %}" alt="" />
 								</div>
 								<div class="face back">
 									<p><small><em>Web Developer</em></small></p>
@@ -324,56 +324,56 @@
 				<ul class="portfolio-wrap">
 					<li class="portfolio-box photography web-design">	
 						<a class="iframe group1" href="project.html" title="">
-							<img  src="images/gallery/1.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/1.jpg' %}" alt="" />	
 							<div class="mask"></div>
 							<h4>All The Time</h4>
 						</a>	
 					</li>
 					<li class="portfolio-box illustration1 motion-graphics">	
 						<a class="iframe group1" href="project1.html" title="">
-							<img  src="images/gallery/2.jpg" alt="" />
+							<img  src="{% static 'images/gallery/2.jpg' %}" alt="" />
 							<div class="mask"></div>	
 							<h4>Golden Eagle</h4>	
 						</a>		
 					</li>		
 					<li class="portfolio-box motion-graphics photography">	
 						<a class="iframe group1" href="project2.html" title="">
-							<img  src="images/gallery/3.jpg" alt="" />
+							<img  src="{% static 'images/gallery/3.jpg' %}" alt="" />
 							<div class="mask"></div>
 							<h4>All The Time</h4>
 						</a>				
 					</li>	
 					<li class="portfolio-box web-design illustration1">
 						<a class="iframe group1" href="project.html" title="">
-							<img  src="images/gallery/4.jpg" alt="" />
+							<img  src="{% static 'images/gallery/4.jpg' %}" alt="" />
 							<div class="mask"></div>
 							<h4>Fixed Mag</h4>	
 						</a> 			
 					</li>	
 					<li class="portfolio-box photography web-design">	
 						<a class="iframe group1" href="project1.html" title="">
-							<img  src="images/gallery/5.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/5.jpg' %}" alt="" />	
 							<div class="mask"></div>	
 							<h4>La Catería</h4>
 						</a>			
 					</li>
 					<li class="portfolio-box illustration1 motion-graphics">	
 						<a class="iframe group1" href="project2.html" title="">
-							<img  src="images/gallery/6.jpg" alt="" />
+							<img  src="{% static 'images/gallery/6.jpg' %}" alt="" />
 							<div class="mask"></div>
 							<h4>5th Anniversary Set</h4>
 						</a>			
 					</li>	
 					<li class="portfolio-box motion-graphics photography">
 						<a class="iframe group1" href="project.html" title="">
-							<img  src="images/gallery/7.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/7.jpg' %}" alt="" />	
 							<div class="mask"></div>
 							<h4>La Catería</h4>
 						</a>			
 					</li>	
 					<li class="portfolio-box web-design illustration1">
 						<a class="iframe group1" href="project1.html" title="">
-							<img  src="images/gallery/8.jpg" alt="" />	
+							<img  src="{% static 'images/gallery/8.jpg' %}" alt="" />	
 							<div class="mask"></div>
 							<h4>Dan Fink</h4>
 						</a>			
@@ -536,22 +536,22 @@
 				<div class="container z-index">	
 					<div class="sixteen columns" data-scrollreveal="enter bottom and move 150px over 1s">
 						<div class="logos-wrap">
-							<img  src="images/logos/1.png" alt="" />	
+							<img  src="{% static 'images/logos/1.png' %}" alt="" />	
 						</div>
 						<div class="logos-wrap">
-							<img  src="images/logos/2.png" alt="" />	
+							<img  src="{% static 'images/logos/2.png' %}" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/3.png" alt="" />	
+							<img  src="{% static 'images/logos/3.png' %}" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/4.png" alt="" />	
+							<img  src="{% static 'images/logos/4.png' %}" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/5.png" alt="" />	
+							<img  src="{% static 'images/logos/5.png' %}" alt="" />	
 						</div>	
 						<div class="logos-wrap">
-							<img  src="images/logos/2.png" alt="" />	
+							<img  src="{% static 'images/logos/2.png' %}" alt="" />	
 						</div>		
 					</div>
 				</div>		
@@ -655,7 +655,7 @@
 				<a href="http://ivang-design.com/chronos/videoyt/">YouTube Video</a>
 			</div>    
 			<div id="hide">
-				<img  src="images/close.png" alt="" /> 
+				<img  src="{% static 'images/close.png' %}" alt="" /> 
 			</div>
         </div>
 	</div>

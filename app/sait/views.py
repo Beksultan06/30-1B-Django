@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
-# Create your views here.
+from app.sait.models import Settings
 def index(request):
+    settings_all = Settings.objects.all()
     return render(request, "index.html", locals())
