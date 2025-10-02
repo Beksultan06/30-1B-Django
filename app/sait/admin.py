@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Settings, Statics
+from .models import Settings, Statics, Imgaes
 
 @admin.register(Settings)
 class SettingsAdmin(admin.ModelAdmin):
@@ -7,3 +7,4 @@ class SettingsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Statics)
+admin.site.register(Imgaes)

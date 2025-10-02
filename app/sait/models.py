@@ -53,3 +53,14 @@ class Statics(models.Model):
     class Meta:
         verbose_name = 'Статистика'
         verbose_name_plural = 'Статистики'    
+
+
+class Imgaes(models.Model):
+    image = models.ImageField(
+        upload_to='images',
+        verbose_name='Фото'
+    )
+
+    class Meta:
+        verbose_name = 'Галлерия'
+        verbose_name_plural = 'Галлерий'

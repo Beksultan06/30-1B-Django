@@ -254,13 +254,15 @@
 				<div class="just_pattern1"></div>
 				<div class="parallax"></div>	
 				<div class="container z-index">
+					{% for statistic in statistic_all %}
 					<div class="four columns">
 						<div class="facts-wrap">
 							<div class="facts-line"></div>
-							<div class="facts-wrap-num"><span class="counter">87</span></div>
-							<h6>Clients</h6> 
+							<div class="facts-wrap-num"><span class="counter">{{ statistic.statics }}</span></div>
+							<h6>{{ statistic.title }}</h6> 
 						</div>
 					</div>
+					{% endfor %}
 				</div>
 			</div>		
 			
@@ -279,77 +281,13 @@
 				</div>
 				
 				<div class="clear"></div>
-			
-				<div class="container">
-					<div class="sixteen columns">
-						<div id="portfolio-filter">
-							<ul id="filter">
-								<li><a href="#" class="current" data-filter="*" title="">Show all</a></li>
-								<li><a href="#" data-filter=".photography" title="">photography</a></li>
-								<li><a href="#" data-filter=".illustration1" title="">illustration</a></li>
-								<li><a href="#" data-filter=".motion-graphics" title="">motion graphics</a></li>
-								<li><a href="#" data-filter=".web-design" title="">web design</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
 				<ul class="portfolio-wrap">
+					{% for image in image_all %}
 					<li class="portfolio-box photography web-design">	
-						<a class="iframe group1" href="project.html" title="">
-							<img  src="{% static 'images/gallery/1.jpg' %}" alt="" />	
-							<div class="mask"></div>
-							<h4>All The Time</h4>
-						</a>	
+						<img  src="{{ image.image.url }}" alt="" style="width : 300px; height: 200px;" />	
+						<div class="mask"></div>
 					</li>
-					<li class="portfolio-box illustration1 motion-graphics">	
-						<a class="iframe group1" href="project1.html" title="">
-							<img  src="{% static 'images/gallery/2.jpg' %}" alt="" />
-							<div class="mask"></div>	
-							<h4>Golden Eagle</h4>	
-						</a>		
-					</li>		
-					<li class="portfolio-box motion-graphics photography">	
-						<a class="iframe group1" href="project2.html" title="">
-							<img  src="{% static 'images/gallery/3.jpg' %}" alt="" />
-							<div class="mask"></div>
-							<h4>All The Time</h4>
-						</a>				
-					</li>	
-					<li class="portfolio-box web-design illustration1">
-						<a class="iframe group1" href="project.html" title="">
-							<img  src="{% static 'images/gallery/4.jpg' %}" alt="" />
-							<div class="mask"></div>
-							<h4>Fixed Mag</h4>	
-						</a> 			
-					</li>	
-					<li class="portfolio-box photography web-design">	
-						<a class="iframe group1" href="project1.html" title="">
-							<img  src="{% static 'images/gallery/5.jpg' %}" alt="" />	
-							<div class="mask"></div>	
-							<h4>La Catería</h4>
-						</a>			
-					</li>
-					<li class="portfolio-box illustration1 motion-graphics">	
-						<a class="iframe group1" href="project2.html" title="">
-							<img  src="{% static 'images/gallery/6.jpg' %}" alt="" />
-							<div class="mask"></div>
-							<h4>5th Anniversary Set</h4>
-						</a>			
-					</li>	
-					<li class="portfolio-box motion-graphics photography">
-						<a class="iframe group1" href="project.html" title="">
-							<img  src="{% static 'images/gallery/7.jpg' %}" alt="" />	
-							<div class="mask"></div>
-							<h4>La Catería</h4>
-						</a>			
-					</li>	
-					<li class="portfolio-box web-design illustration1">
-						<a class="iframe group1" href="project1.html" title="">
-							<img  src="{% static 'images/gallery/8.jpg' %}" alt="" />	
-							<div class="mask"></div>
-							<h4>Dan Fink</h4>
-						</a>			
-					</li>	
+					{% endfor %}
 				</ul>					
 
 				<div class="clear"></div>	
