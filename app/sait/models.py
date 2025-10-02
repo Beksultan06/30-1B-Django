@@ -36,3 +36,20 @@ class Settings(models.Model):
     class Meta:
         verbose_name = 'Баннер'
         verbose_name_plural = 'Баннеры'
+
+
+class Statics(models.Model):
+    title = models.CharField(
+        max_length=155,
+        verbose_name='Заголовок'
+    )
+    statics = models.IntegerField(
+        verbose_name='Статистика'
+    )
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Статистика'
+        verbose_name_plural = 'Статистики'    
